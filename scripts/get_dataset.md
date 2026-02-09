@@ -8,10 +8,10 @@ https://www.kaggle.com/datasets/sowmihari/returns-management
 2) Download the dataset zip
 3) Unzip
 4) Put the main CSV into:
-   data/raw/returns_management.csv
+   data/raw/returns_sustainability_dataset.csv
 
 If the CSV has a different name:
-- Either rename it to returns_management.csv
+- Either rename it to returns_sustainability_dataset.csv
 - Or create a .env file and set RAW_CSV_NAME=<your_file.csv>
 
 ## Kaggle API option
