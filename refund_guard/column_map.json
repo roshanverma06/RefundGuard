@@ -1,0 +1,10 @@
+{
+  "Order_ID": "order_id",
+  "User_ID": "customer_id",
+  "Product_ID": "seller_id",
+  "Order_Date": "order_date",
+  "Days_to_Return": "return_date",
+  "Order_Value": "order_amount",
+  "Return_Reason": "return_reason",
+  "Return_Status": "return_status"
+}
