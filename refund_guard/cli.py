@@ -6,6 +6,8 @@ from refund_guard.inspect import inspect_csv
 from refund_guard.stage import stage_raw_returns
 from refund_guard.transform import transform_curated
 from refund_guard.quality import run_checks
+from refund_guard.export import export_tables
+
 
 app = typer.Typer(help="RefundGuard ETL CLI")
 
@@ -42,6 +44,14 @@ def run_pipeline():
         raise typer.Exit(code=1)
 
     print("Done.")
+
+@app.command()
+def export():
+    s = get_settings()
+    paths = export_tables(s.database_url, s.exports_dir)
+    for p in paths:
+        print(p)
+
 
 
 if __name__ == "__main__":
