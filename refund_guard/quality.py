@@ -13,7 +13,7 @@ def run_checks(db_path: str = "refund_guard.db") -> dict:
     required_tables = {
         "stg_returns",
         "fact_returns",
-        "seller_risk_rollup",
+        "product_risk_rollup",
         "customer_behavior_rollup",
     }
     missing_tables = sorted(list(required_tables - tables))
