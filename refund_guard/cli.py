@@ -7,6 +7,8 @@ from refund_guard.stage import stage_raw_returns
 from refund_guard.transform import transform_curated
 from refund_guard.quality import run_checks
 from refund_guard.export import export_tables
+from refund_guard.report import generate_report
+
 
 
 app = typer.Typer(help="RefundGuard ETL CLI")
@@ -51,6 +53,13 @@ def export():
     paths = export_tables(s.database_url, s.exports_dir)
     for p in paths:
         print(p)
+
+@app.command()
+def report():
+    s = get_settings()
+    path = generate_report(s.database_url, s.reports_dir)
+    print(path)
+
 
 
 
